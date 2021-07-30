@@ -14,10 +14,10 @@ def foo(number):
                 return 0
             if not isPrime(int(str(number)[:i])):
                 return 0
+        print(number)
+        return number
     else:
         return 0
-    print(number)
-    return number
 
 
 summ = 0
