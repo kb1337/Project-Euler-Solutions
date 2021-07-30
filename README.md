@@ -1,2 +1,3 @@
-# Project-Euler-Solutions
+# Project Euler Solutions wtih Python
+
 https://projecteuler.net/archives
