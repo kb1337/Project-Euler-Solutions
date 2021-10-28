@@ -1,5 +1,5 @@
-# 1 times 200 pence,
-# 2 time 100 pence,
+# 1 time 200 pence,
+# 2 times 100 pence,
 # 4 times 50 pence,
 # 10 times 20 pence,
 # 20 times 10 pence,
