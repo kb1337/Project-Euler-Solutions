@@ -1,22 +1,24 @@
-def findDivisors(number):
-    prime_divosers = dict()
+def primeDivisorCount(number):
+    prime_divisors = dict()
 
     count = 0
     while number % 2 == 0:
-        number //= 2
         count += 1
-    if count:
-        prime_divosers[2] = count
+        prime_divisors[2] = count
+        number //= 2
 
-    for i in range(3, int(number ** 0.5) + 1, 1):
-        count = 0
+    for i in range(3, int(number ** 0.5) + 1, 2):
+        count = 1
         while number % i == 0:
-            number //= i
+            prime_divisors[i] = count
             count += 1
-        if count:
-            prime_divosers[i] = count
+            number //= i
+
+    if number > 2:
+        prime_divisors[number] = 1
+
     div_amount = 1
-    for exp in prime_divosers.values():
+    for exp in prime_divisors.values():
         div_amount *= exp + 1
 
     return div_amount
@@ -25,8 +27,8 @@ def findDivisors(number):
 i = 1
 while True:
     triangle_number = i * (i + 1) // 2
-    divisor_amount = findDivisors(triangle_number)
+    divisor_amount = primeDivisorCount(triangle_number)
     if divisor_amount > 500:
-        print("\n\n{} ---> {}".format(triangle_number, divisor_amount))
+        print("{} ---> {}".format(triangle_number, divisor_amount))
         break
     i += 1
