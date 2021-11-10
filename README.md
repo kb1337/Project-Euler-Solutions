@@ -1,3 +1,3 @@
-# Project Euler Solutions wtih Python
+# Project Euler Solutions
 
 https://projecteuler.net/archives
