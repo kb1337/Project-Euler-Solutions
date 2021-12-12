@@ -17,7 +17,7 @@ int main(void)
             int product = i * j;
 
             if (isPalindrome(&product) == TRUE && product > largestNum)
-                largestNum = i * j;
+                largestNum = product;
         }
     }
 
